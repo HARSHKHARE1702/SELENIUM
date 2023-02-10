@@ -1,0 +1,35 @@
+1.Basic Program to automate chromebrowser-gmail open and close
+package Testcase;
+import org.openqa.selenium.chrome.*;
+
+public class TestBrowser {
+	
+	public static void main(String[]args) {
+		ChromeDriver Driver = new ChromeDriver();
+		Driver.get("http://gmail.com");
+		System.out.println(Driver.getTitle());
+		Driver.close();
+		Driver.quit();
+	}
+
+}
+TESTING EXAMPLES-program to check title in chrome
+package Testcase;
+import org.openqa.selenium.chrome.*;
+
+public class TestBrowser {
+	
+	public static void main(String[]args) {
+		ChromeDriver Driver = new ChromeDriver();
+		Driver.get("http://gmail.com");
+		String actualTitle = Driver.getTitle();
+		System.out.println(actualTitle.length());
+		String expectedTitle = "yahoo.com";
+		if(actualTitle.equals(expectedTitle)) {
+		System.out.println("Test case pass");
+	}
+		else {
+			System.out.println("Test case fail");
+		}
+	}
+}
