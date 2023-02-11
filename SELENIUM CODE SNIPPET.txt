@@ -33,3 +33,27 @@ public class TestBrowser {
 		}
 	}
 }
+
+Program to enter string  values in gmail
+
+package Testcase;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.*;
+
+public class TestBrowser {
+	
+	public static void main(String[]args) {
+		ChromeDriver Driver = new ChromeDriver();
+		Driver.get("http://gmail.com");
+		WebElement username = Driver.findElement(By.id("identifierId"));
+		username.sendKeys("hkhare360@gmail.com");
+		WebElement btn=Driver.findElement(By.xpath("/html/body"));
+		btn.click();
+		try {
+		Thread.sleep(3000);
+	}catch(InterruptedException e) {
+		e.printStackTrace();
+	}
+}
+}
