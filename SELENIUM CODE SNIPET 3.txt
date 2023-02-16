@@ -1,0 +1,24 @@
+package Testcase;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.*;
+
+public class TestBrowser {
+	
+	public static void main(String[]args) {
+		ChromeDriver Driver = new ChromeDriver();
+		Driver.get("https://www.amazon.in/?&ext_vrnc=hi&tag=googhydrabk1-21&ref=pd_sl_4qsiujpf5j_e&adgrpid=60456322738&hvpone=&hvptwo=&hvadid=486393568006&hvpos=&hvnetw=g&hvrand=614495858726399791&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9300824&hvtargid=kwd-360364908477&hydadcr=14451_2154369&gclid=EAIaIQobChMI75fJ6eWZ_QIVQppmAh1oEAr9EAAYASAAEgIoa_D_BwE");
+		Driver.findElement(By.linkText("Mega Fashion Days")).click();
+List <WebElement> link = Driver.findElements(By.tagName("a"));
+		System.out.println(link.size());
+		
+		for(WebElement l : link)
+		{
+			System.out.println(l.getText());
+		}
+		
+}
+}
+		

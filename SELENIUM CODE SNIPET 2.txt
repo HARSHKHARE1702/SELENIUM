@@ -1,0 +1,17 @@
+package Testcase;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.*;
+
+public class TestBrowser {
+	
+	public static void main(String[]args) {
+		ChromeDriver Driver = new ChromeDriver();
+		Driver.get("https://www.wikipedia.org/");
+		WebElement username = Driver.findElement(By.id("searchInput"));
+		username.sendKeys("selenium");
+		Driver.manage().window().maximize();
+}
+}
