@@ -1,0 +1,48 @@
+SELENIUM TEST CASE
+1.open the chrome Browser
+2.navigate the URL
+3.Enter valid username
+4.Enter valid password
+5.Click on login
+6.verify URL
+7.verify tiltle
+8.close the Browser
+
+package Testcase;
+
+
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.*;
+
+public class TestBrowser {
+	
+	public static void main(String[]args) {
+		ChromeDriver Driver = new ChromeDriver();
+		Driver.get("https://www.facebook.com/");
+		//Enter valid username
+		Driver.findElement(By.id("email")).sendKeys("hkhare360@gmail.com");
+		//Enter valid password
+		Driver.findElement(By.id("pass")).sendKeys("Hkaa17190@7");
+		//login
+		
+		//verify URL of the page
+		String currenturl=Driver.getCurrentUrl();
+		System.out.println(currenturl);
+		
+		String actualurl="https://www.facebook.com/";
+		if(currenturl.equals(actualurl))
+		{
+			System.out.println("pass");
+		}
+		else
+		{
+			System.out.println("fail");
+		}
+		
+		
+	
+		
+}
+}
